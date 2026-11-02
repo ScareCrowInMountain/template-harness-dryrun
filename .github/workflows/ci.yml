@@ -60,6 +60,15 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
 
+  harness:
+    name: harness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc }
+      - run: node scripts/check-harness.mjs
+
   db-migrations:
     name: db-migrations
     runs-on: ubuntu-latest

@@ -33,6 +33,14 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm audit --prod --audit-level high
 
+  semgrep:
+    name: semgrep
+    runs-on: ubuntu-latest
+    container: { image: semgrep/semgrep }
+    steps:
+      - uses: actions/checkout@v4
+      - run: semgrep scan --config p/default --error --exclude pnpm-lock.yaml
+
   codeql:
     name: codeql
     runs-on: ubuntu-latest
