@@ -1,8 +1,5 @@
 {
   "$schema": "./scripts/harness.schema.json",
-  "level": "L1",
-  "owner": "platform-team",
-  "department": "engineering",
-  "description": "Golden-path template: TS + Supabase with all section-4 gates wired.",
-  "createdAt": "2026-11-02"
+  "level": "L0",
+  "createdAt": "2026-09-01"
 }
