@@ -1,0 +1,24 @@
+name: PR size
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+jobs:
+  pr-size:
+    name: pr-size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Check size
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'size-exempt') }}
+        env:
+          BASE_REF: origin/${{ github.base_ref }}
+          MAX_LINES: "400"
+        run: bash scripts/check-pr-size.sh
+      - name: Exempt
+        if: ${{ contains(github.event.pull_request.labels.*.name, 'size-exempt') }}
+        run: echo "size-exempt label present; reviewer must confirm the reason in the PR body."

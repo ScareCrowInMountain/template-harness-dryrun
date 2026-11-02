@@ -1,0 +1,6 @@
+# Every path needs a human owner. Branch protection requires a CODEOWNER approval.
+# The AI reviewer bot must never appear here.
+*                     @ScareCrowInMountain
+/supabase/            @ScareCrowInMountain
+/.github/             @ScareCrowInMountain
+/docs/RUNBOOK.md      @ScareCrowInMountain

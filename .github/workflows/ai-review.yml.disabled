@@ -1,0 +1,40 @@
+# Second-opinion review by a different model. It COMMENTS only.
+# It cannot approve: it is not a CODEOWNER and has no review permission, so
+# branch protection still requires a human approval. Treat its output as a
+# checklist for the human reviewer, not as a verdict.
+name: AI review
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: ai-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: ai-review
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review this pull request as an independent second reviewer. Scope:
+            1. Security: injection, auth/RLS gaps, secrets, unsafe deserialization, SSRF, path traversal.
+            2. Logic: off-by-one, null/undefined paths, race conditions, error handling that swallows failures.
+            3. Data: migrations without RLS, destructive migrations without a backfill/rollback plan.
+            Do NOT comment on style or formatting (lint handles that).
+            For each finding: file:line, severity (blocker/major/minor), what breaks, how to fix.
+            End with a one-line summary. If nothing is found, say so in one line.
+            Post the result as a single PR comment. Do not approve or request changes.
+          claude_args: "--max-turns 15 --allowedTools Read,Grep,Glob,Bash(git diff:*),Bash(git log:*)"

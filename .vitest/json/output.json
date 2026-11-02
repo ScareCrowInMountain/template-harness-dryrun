@@ -1,0 +1,353 @@
+{
+  "numTotalTestSuites": 7,
+  "numPassedTestSuites": 7,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 9,
+  "numPassedTests": 9,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1793615177663,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["checkHealth"],
+          "fullName": "checkHealth reports up when the query succeeds",
+          "status": "passed",
+          "title": "reports up when the query succeeds",
+          "duration": 5.147052000000031,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["checkHealth"],
+          "fullName": "checkHealth reports down with the error message when the query fails",
+          "status": "passed",
+          "title": "reports down with the error message when the query fails",
+          "duration": 0.49085700000000543,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["checkHealth default clock"],
+          "fullName": "checkHealth default clock uses the current time when no clock is given",
+          "status": "passed",
+          "title": "uses the current time when no clock is given",
+          "duration": 0.6023629999999685,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1793615178241,
+      "endTime": 1793615178247.6023,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/health/health.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["loadEnv"],
+          "fullName": "loadEnv applies defaults",
+          "status": "passed",
+          "title": "applies defaults",
+          "duration": 12.619200999999975,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["loadEnv"],
+          "fullName": "loadEnv rejects a missing required variable with a readable message",
+          "status": "passed",
+          "title": "rejects a missing required variable with a readable message",
+          "duration": 2.5716220000000476,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["loadEnv"],
+          "fullName": "loadEnv rejects a malformed URL",
+          "status": "passed",
+          "title": "rejects a malformed URL",
+          "duration": 0.6773970000000418,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1793615178402,
+      "endTime": 1793615178417.6775,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/env.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["supabase clients"],
+          "fullName": "supabase clients creates an anon client",
+          "status": "passed",
+          "title": "creates an anon client",
+          "duration": 39.830671999999936,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["supabase clients"],
+          "fullName": "supabase clients refuses a service client when the service-role key is missing",
+          "status": "passed",
+          "title": "refuses a service client when the service-role key is missing",
+          "duration": 1.6700889999999617,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": ["supabase clients"],
+          "fullName": "supabase clients creates a service client when the key is present",
+          "status": "passed",
+          "title": "creates a service client when the key is present",
+          "duration": 1.3522090000000162,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1793615178482,
+      "endTime": 1793615178525.3523,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/supabase.test.ts"
+    }
+  ],
+  "coverageMap": {
+    "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/health/health.ts": {
+      "path": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/health/health.ts",
+      "statementMap": {
+        "0": { "start": { "line": 13, "column": 26 }, "end": { "line": 13, "column": null } },
+        "1": { "start": { "line": 15, "column": 20 }, "end": { "line": 15, "column": null } },
+        "2": { "start": { "line": 16, "column": 20 }, "end": { "line": 16, "column": null } },
+        "3": { "start": { "line": 17, "column": 2 }, "end": { "line": 19, "column": null } },
+        "4": { "start": { "line": 18, "column": 4 }, "end": { "line": 18, "column": null } },
+        "5": { "start": { "line": 20, "column": 2 }, "end": { "line": 20, "column": null } }
+      },
+      "fnMap": {
+        "0": {
+          "name": "checkHealth",
+          "decl": { "start": { "line": 11, "column": 22 }, "end": { "line": 11, "column": null } },
+          "loc": { "start": { "line": 14, "column": 25 }, "end": { "line": 21, "column": null } },
+          "line": 14
+        },
+        "1": {
+          "name": "(anonymous_1)",
+          "decl": { "start": { "line": 13, "column": 2 }, "end": { "line": 13, "column": 26 } },
+          "loc": { "start": { "line": 13, "column": 26 }, "end": { "line": 13, "column": null } },
+          "line": 13
+        }
+      },
+      "branchMap": {
+        "0": {
+          "loc": { "start": { "line": 13, "column": 2 }, "end": { "line": 13, "column": null } },
+          "type": "default-arg",
+          "locations": [
+            { "start": { "line": 13, "column": 2 }, "end": { "line": 13, "column": null } }
+          ],
+          "line": 13
+        },
+        "1": {
+          "loc": { "start": { "line": 17, "column": 2 }, "end": { "line": 19, "column": null } },
+          "type": "if",
+          "locations": [
+            { "start": { "line": 17, "column": 2 }, "end": { "line": 19, "column": null } },
+            { "start": {}, "end": {} }
+          ],
+          "line": 17
+        }
+      },
+      "s": { "0": 1, "1": 3, "2": 3, "3": 3, "4": 1, "5": 2 },
+      "f": { "0": 3, "1": 1 },
+      "b": { "0": [1], "1": [1, 2] },
+      "meta": {
+        "lastBranch": 2,
+        "lastFunction": 2,
+        "lastStatement": 6,
+        "seen": {
+          "f:11:22:11:Infinity": 0,
+          "b:13:2:13:Infinity": 0,
+          "f:13:2:13:26": 1,
+          "s:13:26:13:Infinity": 0,
+          "s:15:20:15:Infinity": 1,
+          "s:16:20:16:Infinity": 2,
+          "b:17:2:19:Infinity:undefined:undefined:undefined:undefined": 1,
+          "s:17:2:19:Infinity": 3,
+          "s:18:4:18:Infinity": 4,
+          "s:20:2:20:Infinity": 5
+        },
+        "fnNames": {}
+      }
+    },
+    "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/env.ts": {
+      "path": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/env.ts",
+      "statementMap": {
+        "0": { "start": { "line": 8, "column": 15 }, "end": { "line": 14, "column": null } },
+        "1": { "start": { "line": 19, "column": 17 }, "end": { "line": 19, "column": null } },
+        "2": { "start": { "line": 20, "column": 2 }, "end": { "line": 23, "column": null } },
+        "3": { "start": { "line": 21, "column": 19 }, "end": { "line": 21, "column": null } },
+        "4": { "start": { "line": 21, "column": 50 }, "end": { "line": 21, "column": 85 } },
+        "5": { "start": { "line": 22, "column": 4 }, "end": { "line": 22, "column": null } },
+        "6": { "start": { "line": 24, "column": 2 }, "end": { "line": 24, "column": null } }
+      },
+      "fnMap": {
+        "0": {
+          "name": "loadEnv",
+          "decl": { "start": { "line": 18, "column": 16 }, "end": { "line": 18, "column": 24 } },
+          "loc": { "start": { "line": 18, "column": 70 }, "end": { "line": 25, "column": null } },
+          "line": 18
+        },
+        "1": {
+          "name": "(anonymous_1)",
+          "decl": { "start": { "line": 21, "column": 39 }, "end": { "line": 21, "column": 44 } },
+          "loc": { "start": { "line": 21, "column": 50 }, "end": { "line": 21, "column": 85 } },
+          "line": 21
+        }
+      },
+      "branchMap": {
+        "0": {
+          "loc": { "start": { "line": 18, "column": 24 }, "end": { "line": 18, "column": 70 } },
+          "type": "default-arg",
+          "locations": [
+            { "start": { "line": 18, "column": 52 }, "end": { "line": 18, "column": 70 } }
+          ],
+          "line": 18
+        },
+        "1": {
+          "loc": { "start": { "line": 20, "column": 2 }, "end": { "line": 23, "column": null } },
+          "type": "if",
+          "locations": [
+            { "start": { "line": 20, "column": 2 }, "end": { "line": 23, "column": null } },
+            { "start": {}, "end": {} }
+          ],
+          "line": 20
+        }
+      },
+      "s": { "0": 2, "1": 6, "2": 6, "3": 2, "4": 2, "5": 2, "6": 4 },
+      "f": { "0": 6, "1": 2 },
+      "b": { "0": [6], "1": [2, 4] },
+      "meta": {
+        "lastBranch": 2,
+        "lastFunction": 2,
+        "lastStatement": 7,
+        "seen": {
+          "s:8:15:14:Infinity": 0,
+          "f:18:16:18:24": 0,
+          "b:18:52:18:70": 0,
+          "s:19:17:19:Infinity": 1,
+          "b:20:2:23:Infinity:undefined:undefined:undefined:undefined": 1,
+          "s:20:2:23:Infinity": 2,
+          "s:21:19:21:Infinity": 3,
+          "f:21:39:21:44": 1,
+          "s:21:50:21:85": 4,
+          "s:22:4:22:Infinity": 5,
+          "s:24:2:24:Infinity": 6
+        },
+        "fnNames": {}
+      }
+    },
+    "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/supabase.ts": {
+      "path": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/supabase.ts",
+      "statementMap": {
+        "0": { "start": { "line": 9, "column": 2 }, "end": { "line": 11, "column": null } },
+        "1": { "start": { "line": 19, "column": 2 }, "end": { "line": 21, "column": null } },
+        "2": { "start": { "line": 20, "column": 4 }, "end": { "line": 20, "column": null } },
+        "3": { "start": { "line": 22, "column": 2 }, "end": { "line": 24, "column": null } }
+      },
+      "fnMap": {
+        "0": {
+          "name": "createAnonClient",
+          "decl": { "start": { "line": 8, "column": 16 }, "end": { "line": 8, "column": 33 } },
+          "loc": { "start": { "line": 8, "column": 53 }, "end": { "line": 12, "column": null } },
+          "line": 8
+        },
+        "1": {
+          "name": "createServiceClient",
+          "decl": { "start": { "line": 18, "column": 16 }, "end": { "line": 18, "column": 36 } },
+          "loc": { "start": { "line": 18, "column": 56 }, "end": { "line": 25, "column": null } },
+          "line": 18
+        }
+      },
+      "branchMap": {
+        "0": {
+          "loc": { "start": { "line": 19, "column": 2 }, "end": { "line": 21, "column": null } },
+          "type": "if",
+          "locations": [
+            { "start": { "line": 19, "column": 2 }, "end": { "line": 21, "column": null } },
+            { "start": {}, "end": {} }
+          ],
+          "line": 19
+        }
+      },
+      "s": { "0": 1, "1": 2, "2": 1, "3": 1 },
+      "f": { "0": 1, "1": 2 },
+      "b": { "0": [1, 1] },
+      "meta": {
+        "lastBranch": 1,
+        "lastFunction": 2,
+        "lastStatement": 4,
+        "seen": {
+          "f:8:16:8:33": 0,
+          "s:9:2:11:Infinity": 0,
+          "f:18:16:18:36": 1,
+          "b:19:2:21:Infinity:undefined:undefined:undefined:undefined": 0,
+          "s:19:2:21:Infinity": 1,
+          "s:20:4:20:Infinity": 2,
+          "s:22:2:24:Infinity": 3
+        },
+        "fnNames": {}
+      }
+    },
+    "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/database.types.ts": {
+      "path": "/Users/rong/development/AI-Dev-Rules-alt/template-ts-supabase/src/lib/database.types.ts",
+      "statementMap": {},
+      "fnMap": {},
+      "branchMap": {},
+      "s": {},
+      "f": {},
+      "b": {},
+      "meta": { "lastBranch": 0, "lastFunction": 0, "lastStatement": 0, "seen": {}, "fnNames": {} }
+    }
+  }
+}

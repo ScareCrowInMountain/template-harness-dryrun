@@ -1,0 +1,20 @@
+# Pre-commit gates (section 4.3). Installed by `pnpm install` via the prepare script.
+# Do not commit with --no-verify (section 2.3).
+pre-commit:
+  parallel: false
+  commands:
+    secrets:
+      run: |
+        command -v gitleaks >/dev/null || { echo "gitleaks not installed: brew install gitleaks"; exit 1; }
+        gitleaks protect --staged --redact --config .gitleaks.toml
+    format:
+      glob: "*.{ts,js,json,md,yml,yaml}"
+      run: pnpm exec prettier --check {staged_files}
+    lint:
+      glob: "*.{ts,js}"
+      run: pnpm exec eslint {staged_files}
+    typecheck:
+      glob: "*.ts"
+      run: pnpm exec tsc --noEmit
+    harness:
+      run: node scripts/check-harness.mjs

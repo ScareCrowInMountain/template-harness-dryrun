@@ -1,0 +1,16 @@
+# gitleaks config: default rules + project allowlist.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known-safe fixtures"
+paths = [
+  '''\.env\.example$''',
+  '''pnpm-lock\.yaml$''',
+  '''docs/.*\.md$''',
+]
+regexes = [
+  '''replace-me''',
+  # Supabase local-dev demo JWT (public, same for everyone)
+  '''eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIi''',
+]
