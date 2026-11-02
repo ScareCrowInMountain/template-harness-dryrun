@@ -3,9 +3,12 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule: { interval: weekly }
+    # Wait 7 days before proposing a newly published version (malicious/unstable releases).
+    cooldown: { default-days: 7 }
     groups:
       dev-deps: { dependency-type: development }
     open-pull-requests-limit: 5
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: weekly }
+    cooldown: { default-days: 7 }
